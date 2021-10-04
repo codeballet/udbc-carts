@@ -20,6 +20,7 @@ pipeline {
         echo 'this is the package job'
         sh 'mvn clean package -DskipTests'
         archiveArtifacts '**/target/*.jar'
+        build 'udbc-carts-dockerbuild'
       }
     }
 
